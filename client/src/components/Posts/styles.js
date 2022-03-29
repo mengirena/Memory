@@ -1,4 +1,5 @@
-import { makeStyles } from '@material-ui/core/styles'
+import { makeStyles } from '@material-ui/core/styles';
+
 export default makeStyles((theme) => ({
   mainContainer: {
     display: 'flex',
@@ -10,4 +11,4 @@ export default makeStyles((theme) => ({
   actionDiv: {
     textAlign: 'center',
   },
-}))
+}));

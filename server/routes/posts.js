@@ -1,10 +1,16 @@
-import express from 'express'
+import express from 'express';
 
-import { getPosts, createPost } from '../controllers/posts.js' //in react, we don't need to add the extension but in node, it's required
+//We have to specify the extension like .js in node. However, in React, we don't need to do it. 
+import { getPosts, createPost } from '../controllers/posts.js';
+// import { getPosts, getPost, createPost, updatePost, likePost, deletePost } from '../controllers/posts.js';
 
-const router = express.Router()
+const router = express.Router();
 
-router.get('/',getPosts)
-router.post('/',createPost)
+router.get('/', getPosts);
+router.post('/', createPost);
+// router.get('/:id', getPost);
+// router.patch('/:id', updatePost);
+// router.delete('/:id', deletePost);
+// router.patch('/:id/likePost', likePost);
 
-export default router
+export default router;
