@@ -17,11 +17,11 @@ app.use(cors())
 
 
 const CONNECTION_URL = "mongodb+srv://irena1009:demo123@cluster0.9zado.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 5001
 
 mongoose.connect(CONNECTION_URL) 
     //{ useNewUrlParser: true, useUnifiedTopology: true }) -> deprecated
 .then(() => app.listen(PORT, () => console.log(`Server running on port: ${PORT}`)))
 .catch((error => console.log(error.message)))
 
-//mongoose.set('useFindAndModify', false) -> deprecated
+//mongoose.set('useFindAndModify', false) -> deprecated`

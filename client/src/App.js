@@ -14,7 +14,7 @@ const App = () => {
     const dispatch = useDispatch() 
 
     useEffect(() => {
-        dispatch(getPosts())
+        dispatch(getPosts()) //where are you going to 
     }, [dispatch])
 
     return (
