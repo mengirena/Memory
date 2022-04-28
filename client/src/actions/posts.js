@@ -2,8 +2,24 @@
 
 import * as api from '../api/index.js'; //import everything from the api
 
-// Action Creators: functions return actions 
-export const getPosts = () => async (dispatch) => {
+// Action Creators: are functions that return actions, and an action is just an object with a type and payload
+// ig, 
+// const getPosts = () => {
+//    const action = { type: "FETCH_ALL", payload: [] }
+//    return action  
+// }
+
+// However, transferring data is async so we need redux-thunk to do it, 
+// which is to add an additional async function, use dispatch as property
+// Instead of return and action, we dispatch the action
+// ig,
+// 
+// const getPosts = () => async (dispatch) {
+//    const action = { type: "FETCH_ALL", payload: [] }
+//    dispatch(action)  
+// }
+
+export const getPosts = () => async (dispatch) => { //using redux thunk to allow us to add an additional async function
   try {
     const { data } = await api.fetchPosts(); //response.data
 

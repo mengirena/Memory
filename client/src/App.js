@@ -13,8 +13,8 @@ const App = () => {
     const classes = useStyles()
     const dispatch = useDispatch() 
 
-    useEffect(() => {
-        dispatch(getPosts()) //where are you going to 
+    useEffect(() => {  //where you are going to dispatch the action
+        dispatch(getPosts()) //the action is getPosts()
     }, [dispatch])
 
     return (

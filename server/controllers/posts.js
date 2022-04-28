@@ -10,6 +10,7 @@ export const getPosts = async (req, res) => {
     }
 }
 
+//different logic for creating post
 export const createPost = async (req, res) => {
     const { title, message, selectedFile, creator, tags } = req.body;
 
