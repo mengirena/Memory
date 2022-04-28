@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import FileBase from 'react-file-base64';
 
 import useStyles from './styles';
+import { createPost } from '../../actions/posts';
 // import { createPost, updatePost } from '../../actions/posts';
 
 const Form = ({ currentId, setCurrentId }) => {
@@ -22,10 +23,10 @@ const Form = ({ currentId, setCurrentId }) => {
   };
 
   const handleSubmit = async (e) => {
-    // e.preventDefault();
+    e.preventDefault();
 
     // if (currentId === 0) {
-    //   dispatch(createPost(postData));
+      dispatch(createPost(postData));
     //   clear();
     // } else {
     //   dispatch(updatePost(currentId, postData));
