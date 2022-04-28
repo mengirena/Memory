@@ -11,7 +11,7 @@ import * as api from '../api/index.js'; //import everything from the api
 
 // However, transferring data is async so we need redux-thunk to do it, 
 // which is to add an additional async function, use dispatch as property
-// Instead of return and action, we dispatch the action
+// Instead of return an action, we dispatch the action
 // ig,
 // 
 // const getPosts = () => async (dispatch) {

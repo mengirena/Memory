@@ -1,5 +1,5 @@
-//a reducer is a function accepting the state and an action. Based on differernt action type, it will do different things.
-
+//a reducer is a function accepting the state and an action. Based on differernt action type, it will do different things, either to return to call an action or to return a state change
+// reducer = (state = [], action) => {}
 
 // import { FETCH_ALL, CREATE, UPDATE, DELETE, LIKE } from '../constants/actionTypes';
 
@@ -20,7 +20,7 @@
 //   }
 // };
 
-// posts: our only state, needs to be assigned an initial value
+// posts: our only state so we rename the state to posts, needs to be assigned an initial value
 
 export default (posts = [], action) => {
     switch (action.type) {

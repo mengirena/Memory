@@ -8,13 +8,13 @@ import postRoutes from './routes/posts.js'
 
 const app = express()
 
-app.use('/posts', postRoutes) // route to postRoutes when url is localhost: PORT/posts/ ...
 
 //bodyParser: properly send out requrest
 app.use(bodyParser.json({ limit: "30mb", extended: true}))
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true}))
 app.use(cors())
 
+app.use('/posts', postRoutes) // route to postRoutes when url is localhost: PORT/posts/ ...
 
 const CONNECTION_URL = "mongodb+srv://irena1009:demo123@cluster0.9zado.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 const PORT = process.env.PORT || 5001

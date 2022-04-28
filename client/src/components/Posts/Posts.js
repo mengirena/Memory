@@ -1,5 +1,5 @@
 import React from 'react'
-import { useSelector } from 'react-redux' // use useSelector fetch the data from the global redux store
+import { useSelector } from 'react-redux' // use useSelector to fetch the data from the global redux store
 import Post from './Post/Post'
 import useStyles from './styles'
 
