@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Container, AppBar, Typography, Grow, Grid } from '@material-ui/core';
 import { useDispatch } from 'react-redux'; //dispatch an action
 
@@ -10,6 +10,7 @@ import useStyles from './styles'
 
 //currentId={currentId} setCurrentId={setCurrentId}
 const App = () => {
+    const [currentId, setCurrentId] = useState(null) //use react hook to share the current id state between Posts and Form components under App parent layer
     const classes = useStyles()
     const dispatch = useDispatch() 
 
@@ -27,10 +28,10 @@ const App = () => {
                 <Container>
                 <Grid container justify="space-between" alignItems="stretch" spacing={3}>
                     <Grid item xs={12} sm={7}>
-                        <Posts  />  
+                        <Posts setCurrentId = {setCurrentId} />  
                     </Grid>
                     <Grid item xs={12} sm={4}>
-                        <Form  />
+                        <Form currentId = {currentId} setCurrentId = {setCurrentId} />
                     </Grid>
                 </Grid>
                 </Container>

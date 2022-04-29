@@ -7,7 +7,7 @@ import useStyles from './styles'
 const Posts = ({ setCurrentId }) => {
     const posts = useSelector((state) => state.posts);
     const classes = useStyles();
-  
+    //sending props all the way down to the child components: props drilling -> the exact problem redux solved
     return (
       !posts.length ? <CircularProgress /> : (
         <Grid className={classes.container} container alignItems="stretch" spacing={3}>

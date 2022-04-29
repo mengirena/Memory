@@ -25,8 +25,14 @@ const Form = ({ currentId, setCurrentId }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    if (currentId) {
+      dispatch(updatePost(currentId, postData))
+    } else {
+      dispatch(createPost(postData))
+    }
+
     // if (currentId === 0) {
-      dispatch(createPost(postData));
+      // dispatch(createPost(postData));
     //   clear();
     // } else {
     //   dispatch(updatePost(currentId, postData));
