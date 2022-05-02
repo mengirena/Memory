@@ -17,26 +17,25 @@ const Form = ({ currentId, setCurrentId }) => {
   }, [post]);
 
   const clear = () => {
-    // setCurrentId(0);
-    // setPostData({ creator: '', title: '', message: '', tags: '', selectedFile: '' });
+    setCurrentId(0);
+    setPostData({ creator: '', title: '', message: '', tags: '', selectedFile: '' });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (currentId) {
-      dispatch(updatePost(currentId, postData))
-    } else {
-      dispatch(createPost(postData))
-    }
-
-    // if (currentId === 0) {
-      // dispatch(createPost(postData));
-    //   clear();
+    // if (currentId) {
+    //   dispatch(updatePost(currentId, postData))
     // } else {
-    //   dispatch(updatePost(currentId, postData));
-    //   clear();
+    //   dispatch(createPost(postData))
     // }
+
+    if (currentId === 0) {
+      dispatch(createPost(postData));
+    } else {
+      dispatch(updatePost(currentId, postData));
+    }
+    clear();
   };
 
   return (

@@ -16,7 +16,7 @@ const App = () => {
 
     useEffect(() => {  //where you are going to dispatch the action
         dispatch(getPosts()) //the action is getPosts()
-    }, [dispatch])
+    }, [currentId, dispatch])
 
     return (
         <Container maxWidth="lg">
